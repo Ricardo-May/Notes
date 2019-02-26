@@ -2,9 +2,9 @@
 
 * [Preface](README.md)
 * [Python](Python/README.md)
-  * [GUI](Python/gui/README.md)
-    * [Create GUI with PyQt5](Python/gui/pyqt5.md)
-  * [Numpy](Python/numpy/README.md)
+  * [GUI](Python/GUI/README.md)
+    * [Create GUI with PyQt5](Python/GUI/pyqt5.md)
+  * [Numpy](Python/Numpy/README.md)
 * [Git](Git/README.md)
   * [How to use Git and Github](Git/intro-to-Git/README.md)
     * [Git Commands](Git/intro-to-Git/Git-command.md)
