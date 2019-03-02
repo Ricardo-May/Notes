@@ -1,10 +1,10 @@
 %\documentclass[showpacs,amsmath,amssymb,onecolumn,pra,preprint,superscriptaddress]{revtex4-2}
 % \documentclass[showpacs,amsmath,amssymb,onecolumn,pra,superscriptaddress]{revtex4-2}
 % \documentclass[showpacs,amsmath,amssymb,twocolumn,prx,superscriptaddress]{revtex4-2}
-\documentclass[amsmath,amssymb,onecolumn,pra,superscriptaddress,notitlepage,11pt]{revtex4-2}
+\documentclass[amsmath,amsfonts,twocolumn,aps,rmp,superscriptaddress,11pt]{revtex4-2}
 
-
-\usepackage[dvips]{graphicx} % for figures
+\usepackage{standalone}
+\usepackage{graphicx} % for figures
 \usepackage{amsfonts,amssymb,amscd,amsmath,amsthm}
 \usepackage{enumerate}
 \usepackage{epsfig}
@@ -33,17 +33,19 @@
 
 \begin{document}
 % \preprint{APS/123-QED}
-\title{Reading Notes on Theis--five qubit universal quantum computer}
+\title{Reading Notes on Theses}
 \author{Quanxin Mei}
-\affiliation{Center for Quantum Information, Institute of Interdisciplinary Information Science, Tsinghua University}
 \email{meiquanxin@gmail.com}
-\date{\today}
-\begin{abstract}
-\end{abstract}
+\affiliation{Center for Quantum Information, Institute of Interdisciplinary Information Science, Tsinghua University}
+
+
 \maketitle
+\listoffigures
+\listoftables
+\tableofcontents
 
 
-
+\input{content}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % choose a style
