@@ -1,7 +1,7 @@
 %\documentclass[showpacs,amsmath,amssymb,onecolumn,pra,preprint,superscriptaddress]{revtex4-2}
 % \documentclass[showpacs,amsmath,amssymb,onecolumn,pra,superscriptaddress]{revtex4-2}
 % \documentclass[showpacs,amsmath,amssymb,twocolumn,prx,superscriptaddress]{revtex4-2}
-\documentclass[aps,rmp,twocolumn,superscriptaddress,11pt]{revtex4-2}
+\documentclass[amsmath,amsfonts,aps,rmp,titlepage,superscriptaddress,11pt]{revtex4-2}
 
 \usepackage{standalone}
 \usepackage{graphicx} % for figures
@@ -29,7 +29,8 @@
 %\usepackage[expert]{mathdesign}
 
 
-
+\numberwithin{equation}{section}
+\renewcommand\theequation{\arabic{section}.\arabic{equation}}
 
 \begin{document}
 % \preprint{APS/123-QED}
@@ -47,11 +48,11 @@ The document is organized to make notes on the thesis I have read.
 \listoftables
 \tableofcontents
 
-
+\newpage
 \input{1-FiveQubitUniversalQuantumComputer/content}
-
+\newpage
 \input{2-QuantumThermalizationAndLocalizaiton/content}
-
+\newpage
 \input{3-QuantumSimulationOfInteractingSpinModels/content}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
