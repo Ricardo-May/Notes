@@ -84,7 +84,18 @@ In addition, the region of $E_0(X)=0$ is referred to as a \emph{radio-frequency 
 
 \subsection{Ion Loading} % (fold)
 \label{sub:ion_loading}
-The photoionization of the neutral Yb is a two-photon ionization which includes the $^1S_)$ level to the $^1P_1$ level, and then $^1P_1$ continuum or more. As a typical setup, $1\unit{mW} 399$ laser with beam waist about $100\unit{\mu m}$ and the second step can be performed by any light below $394.1\unit{nm}$. Typically, we can use $369.5\unit{nm}$ as a ionizaiton light or $355\unit{nm}$ with a typical energy $1\unit{mW}$, but single ions can be loaded one by one with $369.5$, however multiple ions will be loaded simutaneously with $355$.
+The photoionization of the neutral Yb is a two-photon ionization which includes the $^1S_)$ level to the $^1P_1$ level, and then $^1P_1$ continuum or more. As a typical setup, $1\unit{mW}  399$ laser with beam waist about $100\unit{\mu m}$ and the second step can be performed by any light below $394.1\unit{nm}$. Typically, we can use $369.5\unit{nm}$ as a ionizaiton light or $355\unit{nm}$ with a typical energy $1\unit{mW}$, but single ions can be loaded one by one with $369.5$, however multiple ions will be loaded simutaneously with $355$.
 
-The other isotopes will be a dark spot in the $^{171}Yb$ion chain, the isotope shift between the $^{171}Yb$ and $^{174}Yb$ in the $^1S_0-^1P_1$ transition frequency is about \emph{$800\unit{MHz}$} which is more than the broadened width($200\unit{MHz}$ typically)
+The other isotopes will be a dark spot in the \yb{171} ion chain, the isotope shift between the \yb{171} and \yb{174} in the $^1S_0-^1P_1$ transition frequency is about \emph{$800\unit{MHz}$} which is more than the broadened width($200\unit{MHz}$ typically)
 The protection beam which is red detuned from the $^2S_{1/2}\rightarrow ^2P_{1/2}$ resonance by $600\unit{MHz}$, and it is on during the loading.
+\subsection{Crystal Recapture} % (fold)
+\label{sub:crystal_recapture}
+The collisions with background gases(mostly Hydrogen) will cause the melting of ion crystal, the probability will increase with increasing ion chain number. Typically, the collision event will occur per five minutes on an average for a chain of $10$ ions. In order to recapture the crystal, Doppler cooling beam and protection beam should be turned on and the trap depth should be lowered by $11\unit{dB}$ for its RF power, and the DC depth should be also reduced to a lower level.
+
+\subsection{\yb{171} qubit} % (fold)
+\yb{171} is a really nice qubit candidate with magnetically insensitive two-level system
+, and the nucleus has a spin $1/2$ so that there exist a hyperfine structure in the electronic levels. The ground state is $^2S_{1/2}$, and the hyperfine splitting cause it into two states $^2S_{1/2}\ket{F=1,m_F=0}$, $^2S_{1/2}\ket{F=0,m_F=0}$, and the $F=1$ states has three manifolds with projection into $m_F=-1, m_F=0, m_F=1$, which can be splitted by a externally applied magnetic field $B_Y\approx 5\unit{G}$ with a zeeman splitting $1.4\unit{MHz/G}\times B_Y$, however the hyperfine splitting is a second-order Zeeman splitting which could be denoted by
+\begin{equation}\label{eq:hyperfinesplitting}
+    \delta_{zz}=\qty(310.8)B^2\unit{Hz},\quad B \textrm{ in Gauss}
+\end{equation}
+and the hyperfine splitting without external magnetic field is $12642.812118466\unit{MHz}$. However, the \yb{174} has no nucleus spin so that there is no hyperfine structure in its electronic levels.

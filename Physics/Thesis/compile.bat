@@ -9,4 +9,4 @@ for %%f in (ThesisNotes.tex) do (
 
 )
 
-del *.aux *.lof *.log *.lot *.out *.toc *.bbl *.fdb_latexmk *.fls *.dvi *.ps *Notes.bib
+del *.aux *.lof *.log *.lot *.out *.toc *.bbl *.fdb_latexmk *.fls *.dvi *.ps *Notes.bib *.blg
