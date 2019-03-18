@@ -1,0 +1,12 @@
+*.aux
+*.log
+*.com
+*.class
+*.out
+*.gz
+*.synctec*
+*.fdb_latexmk
+*.fls
+*.bbl
+*.blg
+*.xdv
