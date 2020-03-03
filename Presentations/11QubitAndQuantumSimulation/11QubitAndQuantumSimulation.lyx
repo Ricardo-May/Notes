@@ -1,0 +1,1353 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme{Warsaw}
+% or ...
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+\usepackage{physics}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This file is a solution template for:
+\end_layout
+
+\begin_layout Itemize
+Talk at a conference/colloquium.
+ 
+\end_layout
+
+\begin_layout Itemize
+Talk length is about 20min.
+ 
+\end_layout
+
+\begin_layout Itemize
+Style is ornate.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+In principle, this file can be redistributed and/or modified under the terms
+ of the GNU Public License, version 2.
+ However, this file is supposed to be a template to be modified for your
+ own needs.
+ For this reason, if you use this file as a template and not specifically
+ distribute it as part of a another package/program, the author grants the
+ extra permission to freely copy and modify this file as you see fit and
+ even to delete this copyright notice.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+11-qubit Trapped Ion Quantum Computer and Quantum Simulation with Trapped
+ Ions
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+QCQS
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+optional, use only with long paper titles
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Quanxin Mei
+\end_layout
+
+\begin_layout Institute
+Center for Quantum Information, Institute for Interdisciplinary Information
+ Sciences, Tsinghua University
+\end_layout
+
+\begin_layout Date
+3.22, 2019
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If you have a file called "institution-logo-filename.xxx", where xxx is a
+ graphic format that can be processed by latex or pdflatex, resp., then you
+ can add a logo by uncommenting the following:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The following causes the table of contents to be shown at the beginning
+ of every subsection.
+ Delete this, if you do not want it.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+AtBeginSubsection[]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+%  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+tableofcontents[currentsection,currentsubsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+%  }
+\end_layout
+
+\begin_layout Plain Layout
+
+%}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If you wish to uncover everything in a step-wise fashion, uncomment the
+ following command:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Structuring a talk is a difficult task and the following structure may not
+ be suitable.
+ Here are some rules that apply for this solution: 
+\end_layout
+
+\begin_layout Itemize
+Exactly two or three sections (other than the summary).
+ 
+\end_layout
+
+\begin_layout Itemize
+At *most* three subsections per section.
+ 
+\end_layout
+
+\begin_layout Itemize
+Talk about 30s to 2min per frame.
+ So there should be between about 15 and 30 frames, all told.
+\end_layout
+
+\begin_layout Itemize
+A conference audience is likely to know very little of what you are going
+ to talk about.
+ So *simplify*! 
+\end_layout
+
+\begin_layout Itemize
+In a 20min talk, getting the main ideas across is hard enough.
+ Leave out details, even if it means being less precise than you think necessary.
+ 
+\end_layout
+
+\begin_layout Itemize
+If you omit details that are vital to the proof/implementation, just say
+ so once.
+ Everybody will be happy with that.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Comparison
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Superconducting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+IBM Q System One, 20-qubit 
+\end_layout
+
+\begin_layout Itemize
+Google, 72-qubit quantum processor
+\end_layout
+
+\begin_layout Itemize
+Rigetti, 16-qubit quantum processor
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ldots
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Trapped Ions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+IonQ, 
+\begin_inset Formula $160$
+\end_inset
+
+ qubits storage, performed operations on 
+\begin_inset Formula $79$
+\end_inset
+
+ qubits, 
+\begin_inset Formula $13$
+\end_inset
+
+ two-qubit gates
+\end_layout
+
+\begin_layout Itemize
+TIQC, to be continued :)
+\end_layout
+
+\end_deeper
+\begin_layout Block
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+IonQ
+\end_layout
+
+\begin_layout Subsection
+Setup
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+IonQ's 11-qubit Universal Quantum Computer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ionq.jpg
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+IonQ's Trap Setup with Multi-channel AOM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Basic Configurations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+HOA2
+\end_layout
+
+\begin_layout Itemize
+Fluorescence is imaged through a 0.6 NA objective
+\end_layout
+
+\begin_layout Itemize
+Detection by multi-channel PMT
+\end_layout
+
+\begin_layout Itemize
+Two contourpropagating 355nm Raman beam
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Performance
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Performance
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+13 ions are loaded, and the central 11 ions are used as qubits
+\end_layout
+
+\begin_layout Itemize
+All qubits can be individually addressed with high fidelity
+\end_layout
+
+\begin_layout Itemize
+All qubits are fully connected, totally 
+\begin_inset Formula $55$
+\end_inset
+
+ pairs
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename connectivity.jpg
+	width 4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+11 qubits are fully connected
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Gate Implementation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Both single-qubit and two-qubit gates are realized by a two-photon Raman
+ transition with a pair of counterprogating beams from a mode-locked pulsed
+ 
+\begin_inset Formula $355$
+\end_inset
+
+nm laser
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Global beam shines on all ions simultaneously
+\end_layout
+
+\begin_layout Itemize
+Individual beam pass through a multi-channel AOM, which allows simultaneous
+ modulation of the phase, frequency and amplitude of each beam
+\end_layout
+
+\begin_layout Itemize
+Two beams are perpendicular to the axis of the ion chain to excite one principle
+ axis of motion transverse to the chain axis
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Gate Implementation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+To perform a single-qubit gate, frequency difference is tuned between Raman
+ beams to resonantly drive a spin flip transition
+\end_layout
+
+\begin_layout Itemize
+To perform a two-qubit gate, off-resonantly drive motional sideband transitions
+ to generate an XX-interaction.
+ AM pulse is applied on selected pair of qubits, multiple transverse motional
+ modes are addressed to mediate spin-spin Ising interaction
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Benchmark
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename single.jpg
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Single-qubit gate fideliy with randomized benchmarking.
+ Randomized benchmarking is implemented by some 
+\begin_inset Formula $\pi/2$
+\end_inset
+
+ gates and 
+\begin_inset Formula $\pi$
+\end_inset
+
+ gates(randomize the computational basis), and the SPAM fideliy is obtained
+ by a coherent transition from 
+\begin_inset Formula $\ket{0}\rightarrow\ket{1}$
+\end_inset
+
+ and then the fidelity of detecting the 
+\begin_inset Formula $\ket{1}$
+\end_inset
+
+ state is exactly the SPAM fidelity.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Benchmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename two.jpg
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Two-qubit gate fidelity, w hich is measured by a BSM.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Quantum Algorithm Demonstration
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Quantum Algorithm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Bernstein Vazirani
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Fro a 
+\begin_inset Formula $n$
+\end_inset
+
+-bit string 
+\begin_inset Formula $x$
+\end_inset
+
+, a Bernstein Vazirani function could be defined by
+\begin_inset Formula 
+\[
+f(x)=c\cdot x+b(mod2)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+The key task for the search problem is to determine the two parameters 
+\begin_inset Formula $x,$
+\end_inset
+
+
+\begin_inset Formula $b$
+\end_inset
+
+, for a classical computer, 
+\begin_inset Formula $n+1$
+\end_inset
+
+ queries are required, however we only need 
+\begin_inset Formula $2$
+\end_inset
+
+ queries with a quantum computer, one for 
+\begin_inset Formula $c$
+\end_inset
+
+ and the other for 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Quantum Algorithm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Hidden Shift
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+There are two functions 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+, and they are related by
+\end_layout
+
+\begin_layout Block
+\begin_inset Formula 
+\[
+g(x)=f(x+c)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Thus the key problem is to find the hidden shift 
+\begin_inset Formula $c$
+\end_inset
+
+, and 
+\begin_inset Formula $n$
+\end_inset
+
+ queries are also required for classical computer, in the contrast, only
+ one query is needed with a quantum computer.
+\end_layout
+
+\begin_layout Block
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Quantum Algorithm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Bounded error quantum polynomial time problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+A problem belongs to BQP, then the single quantum query success probability
+ needs to be greater than 
+\begin_inset Formula $2/3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Block
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename BV.jpg
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The results for BV algorithm with 
+\begin_inset Formula $11$
+\end_inset
+
+-qubit trapped ion quantum computer.
+ The average success probability is 
+\begin_inset Formula $78\%$
+\end_inset
+
+ and 
+\begin_inset Formula $87.8\%$
+\end_inset
+
+ of the oracle implementations exceeds the limit of BQP 
+\begin_inset Formula $2/3$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename hs.jpg
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The results for Hidden Shift algorithm.
+ The average success is 
+\begin_inset Formula $35\%$
+\end_inset
+
+, which is caused by more gates, especially two-qubit gates.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Quantum Simulation with 
+\begin_inset Formula $53$
+\end_inset
+
+-qubit Quantum Simulator
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Experimental Setup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Three-layer trap
+\end_layout
+
+\begin_layout Itemize
+central spacing 
+\begin_inset Formula $1.5\mu m$
+\end_inset
+
+ in 
+\begin_inset Formula $53$
+\end_inset
+
+ ions and 
+\begin_inset Formula $3.5\mu m$
+\end_inset
+
+ in either end
+\end_layout
+
+\begin_layout Itemize
+axial trap frequency 
+\begin_inset Formula $200$
+\end_inset
+
+kHz
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\nu_{cm}=4.85$
+\end_inset
+
+MHz
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Quantum Quench
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Realize a quantum many-body Hamiltonian with long-range Ising interactions
+ and flexible tuning parameters, one for strength and the other for the
+ range of interaction
+\end_layout
+
+\begin_layout Itemize
+Experimentally realize the Hamiltonian with spin-dependent optical dipole
+ forces from an applied laser field
+\end_layout
+
+\begin_layout Itemize
+Suddenly change the Hamiltonian with a switch of AOM
+\end_layout
+
+\begin_layout Frame
+\begin_inset Formula 
+\[
+H=\sum_{i<j}J_{ij}\sigma_{i}^{x}\sigma_{j}^{x}+B_{z}\sum_{i}\sigma_{i}^{z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Formula 
+\[
+J_{ij}=J_{0}/(i-j)^{\alpha}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a parameter valued from 
+\begin_inset Formula $0.8$
+\end_inset
+
+ to 
+\begin_inset Formula $1.0$
+\end_inset
+
+ in the experiment
+\end_layout
+
+\end_body
+\end_document
